@@ -1,231 +1,387 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/homeScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
+    android:background="@color/primary"
     android:fillViewport="true">
 
-    <!-- Main vertical layout for calculator content -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Home title -->
-        <TextView
-            android:id="@+id/tvHomeTitle"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/home_title"
-            android:textColor="#1B5E20"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
 
-        <!-- Short description -->
-        <TextView
-            android:id="@+id/tvHomeDescription"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/miniLogoBadge">
+
+                <TextView
+                    android:id="@+id/tvHomeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_title"
+                    android:textColor="#00F5FF"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.02" />
+
+                <TextView
+                    android:id="@+id/tvHomeDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/home_description"
+                    android:textColor="#64748B"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/miniLogoBadge"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_result_highlight"
+                android:padding="8dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_app_logo_neon" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="@string/home_description"
-            android:textColor="#555555"
-            android:textSize="14sp" />
+            android:orientation="vertical"
+            android:background="@drawable/bg_result_highlight"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="6dp">
 
-        <!-- Input section card -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NET FINAL PAYABLE"
+                android:textColor="#94A3B8"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:id="@+id/tvTotalSaving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/total_saving_default"
+                android:textColor="#00F5FF"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/inputCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
             android:background="@drawable/bg_card_premium"
             android:elevation="4dp"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
-            <!-- Petrol type label -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_petrol_type"
-                android:textColor="#222222"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textColor="#94A3B8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
 
-            <!-- Petrol type spinner -->
-            <Spinner
-                android:id="@+id/spinnerPetrolType"
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/togglePetrolType"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6dp" />
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_premium"
+                android:padding="4dp"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:checkedButton="@+id/btnRon95">
 
-            <!-- Petrol price input label -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:text="@string/label_petrol_price"
-                android:textColor="#222222"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRon95"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/option_ron95"
+                    android:textColor="@color/text_toggle_state"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:backgroundTint="@color/bg_toggle_color"
+                    app:cornerRadius="8dp"
+                    app:rippleColor="#4000F5FF" />
 
-            <!-- Petrol price input -->
-            <EditText
-                android:id="@+id/etPetrolPrice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:hint="Example: 4.27"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:background="@drawable/bg_input_premium"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRon97"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/option_ron97"
+                    android:textColor="@color/text_toggle_state"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:backgroundTint="@color/bg_toggle_color"
+                    app:cornerRadius="8dp"
+                    app:rippleColor="#4000F5FF" />
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDiesel"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/option_diesel"
+                    android:textColor="@color/text_toggle_state"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:backgroundTint="@color/bg_toggle_color"
+                    app:cornerRadius="8dp"
+                    app:rippleColor="#4000F5FF" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
 
-            <!-- Fuel usage input label -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:text="@string/label_fuel_usage"
-                android:textColor="#222222"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <!-- Fuel usage input -->
-            <EditText
-                android:id="@+id/etFuelUsage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:hint="Example: 40"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp" />
-
-            <!-- Eligibility label -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:text="@string/label_budi_eligible"
-                android:textColor="#222222"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <!-- RadioGroup ensures user can only select Yes or No -->
-            <RadioGroup
-                android:id="@+id/rgEligibility"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rbEligibleYes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/option_yes"
-                    android:textSize="15sp" />
-
-                <RadioButton
-                    android:id="@+id/rbEligibleNo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:checked="true"
-                    android:text="@string/option_no"
-                    android:textSize="15sp" />
-
-            </RadioGroup>
-
-            <!-- Calculate button -->
-            <Button
-                android:id="@+id/btnCalculate"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:backgroundTint="#1B5E20"
-                android:text="@string/button_calculate"
-                android:background="@drawable/bg_button_primary"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                />
+                android:hint="Petrol Price per Liter"
+                android:textColorHint="#64748B"
+                app:hintTextColor="#00F5FF"
+                app:boxBackgroundMode="none"
+                app:prefixText="RM "
+                app:prefixTextColor="#00F5FF">
 
-            <!-- Reset button -->
-            <Button
-                android:id="@+id/btnReset"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPetrolPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/bg_input_premium"
+                    android:padding="14dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_button_secondary"
-                android:text="@string/button_reset"
-                android:textColor="#1B5E20" />
+                android:layout_marginTop="14dp"
+                android:hint="Target Fuel Volume"
+                android:textColorHint="#64748B"
+                app:hintTextColor="#00F5FF"
+                app:boxBackgroundMode="none"
+                app:suffixText=" Liters"
+                app:suffixTextColor="#94A3B8">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFuelUsage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/bg_input_premium"
+                    android:padding="14dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_budi_eligible"
+                android:textColor="#94A3B8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <RadioGroup
+                android:id="@+id/rgEligibility"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_input_premium"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbEligibleYes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_toggle_state"
+                    android:textColor="@color/text_toggle_state"
+                    android:text="@string/option_yes"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbEligibleNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_toggle_state"
+                    android:textColor="@color/text_toggle_state"
+                    android:checked="true"
+                    android:text="@string/option_no"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReset"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="0.7"
+                    android:layout_marginEnd="6dp"
+                    android:text="Reset"
+                    android:textColor="#64748B"
+                    android:textAllCaps="false"
+                    app:strokeColor="#334155"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1.3"
+                    android:layout_marginStart="6dp"
+                    android:text="Process Calculation"
+                    android:textColor="#0F172A"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:backgroundTint="#00F5FF"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- Result section card -->
         <LinearLayout
             android:id="@+id/resultCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/bg_card_premium"
             android:elevation="4dp"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/tvResultTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/result_title"
-                android:textColor="#1B5E20"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.02" />
 
-            <TextView
-                android:id="@+id/tvTotalPetrolCost"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/total_petrol_cost_default"
-                android:textColor="#222222"
-                android:textSize="16sp" />
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Base Fuel Cost"
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp"
+                    android:layout_alignParentStart="true"/>
+                <TextView
+                    android:id="@+id/tvTotalPetrolCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_petrol_cost_default"
+                    android:textColor="#E2E8F0"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/tvBudiRebate"
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="#1E293B" />
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/budi_rebate_default"
-                android:textColor="#222222"
-                android:textSize="16sp" />
+                android:layout_marginTop="14dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BUDI Program Rebate"
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp"
+                    android:layout_alignParentStart="true"/>
+                <TextView
+                    android:id="@+id/tvBudiRebate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/budi_rebate_default"
+                    android:textColor="#10B981"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/tvTotalSaving"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/total_saving_default"
-                android:background="@drawable/bg_result_highlight"
-                android:textColor="#1B5E20"
-                android:textSize="18sp"
-                android:padding="12dp"
-                android:textStyle="bold" />
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="#1E293B" />
 
             <TextView
                 android:id="@+id/tvRebateNote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/rebate_note"
-                android:textColor="#777777"
-                android:textSize="13sp" />
-
+                android:textColor="#64748B"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp" />
         </LinearLayout>
 
     </LinearLayout>
-
 </ScrollView>

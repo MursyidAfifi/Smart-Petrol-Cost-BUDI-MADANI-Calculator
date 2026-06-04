@@ -1,65 +1,67 @@
-# Smart Petrol Cost Calculator with BUDI MADANI Rebate (Malaysia)
+# ⛽ Smart Petrol Cost & BUDI MADANI Calculator
 
-## 📱 Project Overview
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Material Design](https://img.shields.io/badge/Material_Design-757575?style=for-the-badge&logo=material-design&logoColor=white)
 
-Smart Petrol Cost Calculator with BUDI MADANI Rebate is an Android mobile application developed using **Java** and **XML** in Android Studio. The application helps users estimate their petrol expenses in Malaysia and calculate the applicable BUDI MADANI fuel rebate based on petrol type and eligibility status.
+A sleek, modern Android application built to help Malaysian users estimate their daily or monthly petrol expenses and automatically calculate applicable **BUDI MADANI** fuel subsidies.
 
-This project was developed for the **ICT602 Mobile Technology** individual assignment.
-
----
-
-## 👨‍💻 Author Information
-
-| Item | Details |
-|------|---------|
-| Name | Zarith Asyraf Bin Zureimi |
-| Matric No | 2025161739 |
-| Course | ICT602 |
-| Year | 2026 |
-
-
+Developed as part of the **ICT602 Mobile Technology** coursework, this project features a custom premium dark-mode interface, dynamic state selectors, and Material Design 3 components.
 
 ---
 
-## 🎯 Application Objectives
+## 👨‍💻 Developer Profile
 
-The main objectives of this application are:
-
-- To calculate the total petrol cost based on fuel usage and petrol price per liter.
-- To apply the BUDI MADANI rebate only for eligible users using RON95 petrol.
-- To display the calculation result clearly in Malaysian Ringgit (RM).
-- To provide a simple and user-friendly Android interface with Home and About pages.
+| Role | Details |
+| :--- | :--- |
+| **Developer** | Mursyid Afifi Bin Mohd Khalid |
+| **Matric No.** | 2025304667 |
+| **Program** | Bachelor of Information System Engineering |
+| **Course** | ICT602 - Mobile Technology |
 
 ---
 
-## ⚙️ Main Features
+## ✨ Key Features
 
-### 1. Petrol Cost Calculator
+### 🧮 Core Calculation Engine
+* **Dynamic Costing:** Instantly calculates total fuel cost based on user-defined volume (Liters) and current pump price (RM).
+* **Smart Rebate Logic:** Automatically applies the **RM 1.99 per liter** BUDI MADANI subsidy *only* if the user selects **RON95** and confirms eligibility.
+* **Digital Receipt Output:** Renders the base fuel cost, applied rebates, and net final payable amount in a clean, easy-to-read ledger format.
 
-Users can enter:
+### 🎨 Premium UI/UX Design
+* **Midnight & Neon Theme:** Features a custom dark slate (`#0F172A`) background with high-contrast Electric Neon Cyan (`#00F5FF`) accents.
+* **Material Design Inputs:** Utilizes floating-label text fields with locked prefixes (`RM`) and suffixes (`Liters`) to prevent user input errors.
+* **Interactive Segmented Toggles:** Replaces outdated radio buttons with a custom-built, animated flat-segmented toggle switch for eligibility selection.
+* **Custom Vector Branding:** Includes a scalable, bespoke neon fuel-pump logo that adapts perfectly to modern Android launcher grids.
 
-- Petrol type: RON95, RON97, or Diesel
-- Petrol price per liter
-- Fuel usage in liters
-- BUDI MADANI eligibility status: Yes or No
+---
 
-### 2. BUDI MADANI Rebate Logic
+## 📱 Application Screenshots
 
-The rebate is calculated using the subsidy rate of:
+| Splash Screen | Home Dashboard |
+|:---:|:---:|
+| <img src="screenshots/splash_screen.png" width="250" alt="Splash Screen"> | <img src="screenshots/home_screen.png" width="250" alt="Home Screen"> |
 
-```text
-RM 1.99 per liter
-```
+| Calculation Receipt | Developer Profile |
+|:---:|:---:|
+| <img src="screenshots/calculation_result.png" width="250" alt="Calculation Result"> | <img src="screenshots/about_screen.png" width="250" alt="About Screen"> |
 
-## 📸 Application Screenshots
+---
 
-| Splash Screen | Home Page |
-|--------------|-----------|
-| <img src="screenshots/splash_screen.png" width="220"> | <img src="screenshots/home_screen.png" width="220"> |
+## 🛠️ Technical Stack & Architecture
 
-| Calculation Result | About Page |
-|--------------------|------------|
-| <img src="screenshots/calculation_result.png" width="220"> | <img src="screenshots/about_screen.png" width="220"> |
+* **Language:** Java
+* **Markup:** XML (Custom Drawables, Selectors, and Layouts)
+* **IDE:** Android Studio
+* **Architecture:** Fragment-based Navigation (Home & About)
+* **Libraries:** AndroidX, Google Material Components (`com.google.android.material`)
 
-``` 
+---
 
+## 🚀 Getting Started
+
+To run this project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/mursyidafifi/smart-petrol-calculator.git](https://github.com/mursyidafifi/smart-petrol-calculator.git)

@@ -5,11 +5,10 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import com.google.android.material.button.MaterialButtonToggleGroup;
 import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +24,7 @@ public class HomeFragment extends Fragment {
     private static final double BUDI_SUBSIDY_RATE = 1.99;
 
     // UI components
-    private Spinner spinnerPetrolType;
+    private MaterialButtonToggleGroup togglePetrolType;
     private EditText etPetrolPrice, etFuelUsage;
     private RadioButton rbEligibleYes, rbEligibleNo;
     private Button btnCalculate, btnReset;
@@ -45,7 +44,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         // Link XML views with Java variables
-        spinnerPetrolType = view.findViewById(R.id.spinnerPetrolType);
+        togglePetrolType = view.findViewById(R.id.togglePetrolType);
         etPetrolPrice = view.findViewById(R.id.etPetrolPrice);
         etFuelUsage = view.findViewById(R.id.etFuelUsage);
         rbEligibleYes = view.findViewById(R.id.rbEligibleYes);
@@ -57,7 +56,7 @@ public class HomeFragment extends Fragment {
         tvTotalSaving = view.findViewById(R.id.tvTotalSaving);
 
         // Setup petrol type dropdown
-        setupPetrolSpinner();
+        // setupPetrolSpinner(); (Removed as we are using toggle group)
 
         // Calculate button action
         btnCalculate.setOnClickListener(v -> calculatePetrolCost());
@@ -66,24 +65,6 @@ public class HomeFragment extends Fragment {
         btnReset.setOnClickListener(v -> resetCalculator());
 
         return view;
-    }
-
-    private void setupPetrolSpinner() {
-        // Spinner options required by assignment: RON95, RON97, Diesel
-        String[] petrolTypes = {
-                getString(R.string.option_ron95),
-                getString(R.string.option_ron97),
-                getString(R.string.option_diesel)
-        };
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                requireContext(),
-                android.R.layout.simple_spinner_item,
-                petrolTypes
-        );
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerPetrolType.setAdapter(adapter);
     }
 
     private void calculatePetrolCost() {
@@ -116,7 +97,16 @@ public class HomeFragment extends Fragment {
                 return;
             }
 
-            String petrolType = spinnerPetrolType.getSelectedItem().toString();
+            int checkedId = togglePetrolType.getCheckedButtonId();
+            String petrolType = "";
+            if (checkedId == R.id.btnRon95) {
+                petrolType = getString(R.string.option_ron95);
+            } else if (checkedId == R.id.btnRon97) {
+                petrolType = getString(R.string.option_ron97);
+            } else if (checkedId == R.id.btnDiesel) {
+                petrolType = getString(R.string.option_diesel);
+            }
+
             boolean isEligible = rbEligibleYes.isChecked();
 
             // Formula 1: Total petrol cost = fuel usage x petrol price per liter
@@ -166,8 +156,8 @@ public class HomeFragment extends Fragment {
         etPetrolPrice.setText("");
         etFuelUsage.setText("");
 
-        // Reset spinner to RON95
-        spinnerPetrolType.setSelection(0);
+        // Reset toggle to RON95
+        togglePetrolType.check(R.id.btnRon95);
 
         // Reset eligibility to No
         rbEligibleNo.setChecked(true);

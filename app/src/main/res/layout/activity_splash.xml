@@ -3,19 +3,21 @@
     android:id="@+id/splashLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_header_gradient"
+    android:background="@color/primary"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
 
+    <!-- Application logo -->
     <ImageView
         android:id="@+id/imgSplashLogo"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:src="@drawable/budi_madani_logo"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
         android:contentDescription="@string/app_name" />
 
+    <!-- Splash screen title - Updated to Neon Cyan -->
     <TextView
         android:id="@+id/tvSplashTitle"
         android:layout_width="match_parent"
@@ -23,10 +25,11 @@
         android:layout_marginTop="22dp"
         android:gravity="center"
         android:text="@string/app_full_title"
-        android:textColor="#FFFFFF"
+        android:textColor="#00F5FF"
         android:textSize="22sp"
         android:textStyle="bold" />
 
+    <!-- Splash screen subtitle - Fixed from template green to Slate Gray -->
     <TextView
         android:id="@+id/tvSplashSubtitle"
         android:layout_width="match_parent"
@@ -34,7 +37,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Smart petrol cost and rebate calculator"
-        android:textColor="#E8F5E9"
+        android:textColor="#94A3B8"
         android:textSize="14sp" />
 
 </LinearLayout>

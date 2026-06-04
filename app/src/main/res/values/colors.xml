@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Your new primary app colors -->
+    <color name="primary">#1E293B</color> <!-- Sleek Midnight Charcoal -->
+    <color name="primary_dark">#0F172A</color> <!-- Dark Slate Background -->
+    <color name="accent">#0EA5E9</color> <!-- Electric Sky Blue for focus/highlights -->
+    <color name="card_bg">#FFFFFF</color> <!-- Clean White for the form card -->
+
+    <!-- Button text/surface states -->
+    <color name="button_primary">#0EA5E9</color>
+    <color name="button_secondary">#64748B</color>
 </resources>

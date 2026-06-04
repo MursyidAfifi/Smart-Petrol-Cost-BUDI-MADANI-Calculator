@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/aboutScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
+    android:background="@color/primary"
     android:fillViewport="true">
 
-    <!-- Main About page layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,133 +14,192 @@
         android:gravity="center_horizontal"
         android:padding="24dp">
 
-        <!-- Application icon -->
-        <!-- For now, we use the default launcher foreground icon -->
-        <ImageView
-            android:id="@+id/imgAppIcon"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/budi_madani_logo"/>
+        <!-- Glowing Neon Emblem Container -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_result_highlight"
+            android:padding="20dp"
+            android:elevation="8dp">
 
-        <!-- About title -->
+            <ImageView
+                android:id="@+id/imgAppIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_app_logo_neon" />
+        </FrameLayout>
+
+        <!-- About Core Typography -->
         <TextView
             android:id="@+id/tvAboutTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:gravity="center"
             android:text="@string/about_title"
-            android:textColor="#1B5E20"
+            android:textColor="#00F5FF"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:letterSpacing="-0.01" />
 
-        <!-- About description -->
         <TextView
             android:id="@+id/tvAboutDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:lineSpacingExtra="3dp"
+            android:lineSpacingExtra="5dp"
             android:text="@string/about_description"
-            android:textColor="#555555"
-            android:textSize="15sp" />
+            android:textColor="#94A3B8"
+            android:textSize="14sp" />
 
-        <!-- Author information card -->
+        <!-- Developer Information Profile Card -->
         <LinearLayout
             android:id="@+id/authorCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/bg_card_premium"
             android:elevation="4dp"
             android:orientation="vertical"
-            android:padding="18dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/tvAuthorSectionTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Author Information"
-                android:textColor="#1B5E20"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:text="System Architect"
+                android:textColor="#00F5FF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="6dp"
+                android:background="#00F5FF" />
 
             <TextView
                 android:id="@+id/tvAuthorName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/author_name"
-                android:textColor="#222222"
-                android:textSize="16sp" />
+                android:layout_marginTop="16dp"
+                android:text="Name: Mursyid Afifi Bin Mohd Khalid"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvMatricNo"
+            <!-- Academic Matrix Grid Splitter Layout -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/matric_no"
-                android:textColor="#222222"
-                android:textSize="16sp" />
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <TextView
-                android:id="@+id/tvCourseName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/course_name"
-                android:textColor="#222222"
-                android:textSize="16sp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="#0F172A"
+                    android:padding="12dp"
+                    android:layout_marginEnd="4dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MATRIC NO"
+                        android:textColor="#64748B"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvMatricNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="2025304667"
+                        android:textColor="#E2E8F0"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="#0F172A"
+                    android:padding="12dp"
+                    android:layout_marginStart="4dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COURSE CODE"
+                        android:textColor="#64748B"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvCourseName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/course_name"
+                        android:textColor="#E2E8F0"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- GitHub repository card -->
+        <!-- Version Control Link Card -->
         <LinearLayout
             android:id="@+id/githubCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="14dp"
             android:background="@drawable/bg_card_premium"
             android:elevation="4dp"
             android:orientation="vertical"
-            android:padding="18dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/tvGithubLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/github_label"
-                android:textColor="#1B5E20"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:text="Deployment Source"
+                android:textColor="#00F5FF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
 
-            <!-- This TextView will be made clickable in AboutFragment.java -->
             <TextView
                 android:id="@+id/tvGithubUrl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/github_url"
-                android:textColor="#1565C0"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
+                android:text="https://github.com/mursyidafifi/smart-petrol-calculator"
+                android:textColor="#38BDF8"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:autoLink="web"
+                android:linksClickable="true" />
         </LinearLayout>
 
-        <!-- Copyright notice -->
+        <!-- System Footer Copyright Label -->
         <TextView
             android:id="@+id/tvCopyright"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="8dp"
             android:gravity="center"
-            android:text="@string/copyright_notice"
-            android:textColor="#777777"
-            android:textSize="13sp" />
+            android:text="© 2026 Mursyid Afifi. All rights reserved."
+            android:textColor="#475569"
+            android:textSize="12sp" />
 
     </LinearLayout>
-
 </ScrollView>
