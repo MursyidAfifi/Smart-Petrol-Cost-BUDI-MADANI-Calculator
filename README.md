@@ -4,7 +4,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Material Design](https://img.shields.io/badge/Material_Design-757575?style=for-the-badge&logo=material-design&logoColor=white)
 
-A sleek, modern Android application built to help Malaysian users estimate their daily or monthly petrol expenses and automatically calculate applicable **BUDI MADANI** fuel subsidies.
+A sleek, modern Android application built to help Malaysian users estimate their daily or monthly petrol expenses and automatically calculate applicable **BUDI MADANI** fuel subsidies. 
 
 Developed as part of the **ICT602 Mobile Technology** coursework, this project features a custom premium dark-mode interface, dynamic state selectors, and Material Design 3 components.
 
@@ -64,4 +64,4 @@ To run this project locally on your machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/mursyidafifi/smart-petrol-calculator.git](https://github.com/mursyidafifi/smart-petrol-calculator.git)
+   git clone [https://github.com/MursyidAfifi/Smart-Petrol-Cost-BUDI-MADANI-Calculator.git](https://github.com/MursyidAfifi/Smart-Petrol-Cost-BUDI-MADANI-Calculator.git)
