@@ -1,3 +1,4 @@
+![Uploading Screenshot_20260605_005203.png…]()
 # ⛽ Smart Petrol Cost & BUDI MADANI Calculator
 
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
@@ -40,11 +41,11 @@ Developed as part of the **ICT602 Mobile Technology** coursework, this project f
 
 | Splash Screen | Home Dashboard |
 |:---:|:---:|
-| <img src="screenshots/Screenshot_20260605_004942.png" width="250" alt="Splash Screen"> | <img src="screenshots/Screenshot_20260605_004729.png" width="250" alt="Home Screen"> |
+| <img width="1080" height="2400" alt="Screenshot_20260605_004835" src="https://github.com/user-attachments/assets/af0e2ad5-2907-49b6-86aa-dcfe600541ad" /> | <img width="1080" height="2400" alt="Screenshot_20260605_004729" src="https://github.com/user-attachments/assets/a8ef51a0-5e1b-47b4-aa24-6b24fb99fddb" /> |
 
 | Calculation Receipt | Developer Profile |
 |:---:|:---:|
-| <img src="screenshots/Screenshot_20260605_004735.png" width="250" alt="Calculation Result"> | <img src="screenshots/Screenshot_20260605_005203.png" width="250" alt="About Screen"> |
+| <img width="1080" height="2400" alt="Screenshot_20260605_004735" src="https://github.com/user-attachments/assets/51a95966-7213-4981-8f55-e10f6a40ea81" /> | <img width="1080" height="2400" alt="Screenshot_20260605_005203" src="https://github.com/user-attachments/assets/38625fc9-1df1-4d31-8334-3918be227422" /> |
 
 ---
 
