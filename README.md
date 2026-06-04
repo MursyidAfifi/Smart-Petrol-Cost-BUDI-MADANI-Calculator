@@ -1,4 +1,4 @@
-![Uploading Screenshot_20260605_005203.png…]()
+<img width="1080" height="2400" alt="Screenshot_20260605_005203" src="https://github.com/user-attachments/assets/f70f77ad-28f9-4ea9-9cd8-bb4681d09d44" />
 # ⛽ Smart Petrol Cost & BUDI MADANI Calculator
 
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
@@ -41,11 +41,11 @@ Developed as part of the **ICT602 Mobile Technology** coursework, this project f
 
 | Splash Screen | Home Dashboard |
 |:---:|:---:|
-| <img width="1080" height="2400" alt="Screenshot_20260605_004835" src="https://github.com/user-attachments/assets/af0e2ad5-2907-49b6-86aa-dcfe600541ad" /> | <img width="1080" height="2400" alt="Screenshot_20260605_004729" src="https://github.com/user-attachments/assets/a8ef51a0-5e1b-47b4-aa24-6b24fb99fddb" /> |
+| <img width="1080" height="2400" alt="Screenshot_20260605_004942" src="https://github.com/user-attachments/assets/5bc6dd41-9364-4e64-8add-af35cc183a8f" />|<img width="1080" height="2400" alt="Screenshot_20260605_004729" src="https://github.com/user-attachments/assets/1f4edd1b-ce55-4e06-93fe-135fc84c8e3d" /> |
 
 | Calculation Receipt | Developer Profile |
 |:---:|:---:|
-| <img width="1080" height="2400" alt="Screenshot_20260605_004735" src="https://github.com/user-attachments/assets/51a95966-7213-4981-8f55-e10f6a40ea81" /> | <img width="1080" height="2400" alt="Screenshot_20260605_005203" src="https://github.com/user-attachments/assets/38625fc9-1df1-4d31-8334-3918be227422" /> |
+| <img width="1080" height="2400" alt="Screenshot_20260605_004735" src="https://github.com/user-attachments/assets/30f5b1a2-e5eb-4e70-9ac6-6626638b0add" /> | ![Uploading Screenshot_20260605_005203.png…]()|
 
 ---
 
