@@ -40,11 +40,11 @@ Developed as part of the **ICT602 Mobile Technology** coursework, this project f
 
 | Splash Screen | Home Dashboard |
 |:---:|:---:|
-| <img src="screenshots/splash_screen.png" width="250" alt="Splash Screen"> | <img src="screenshots/home_screen.png" width="250" alt="Home Screen"> |
+| <img src="screenshots/Screenshot_20260605_004942.png" width="250" alt="Splash Screen"> | <img src="screenshots/Screenshot_20260605_004729.png" width="250" alt="Home Screen"> |
 
 | Calculation Receipt | Developer Profile |
 |:---:|:---:|
-| <img src="screenshots/calculation_result.png" width="250" alt="Calculation Result"> | <img src="screenshots/about_screen.png" width="250" alt="About Screen"> |
+| <img src="screenshots/Screenshot_20260605_004735.png" width="250" alt="Calculation Result"> | <img src="screenshots/Screenshot_20260605_005203.png" width="250" alt="About Screen"> |
 
 ---
 
@@ -60,8 +60,3 @@ Developed as part of the **ICT602 Mobile Technology** coursework, this project f
 
 ## 🚀 Getting Started
 
-To run this project locally on your machine:
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/MursyidAfifi/Smart-Petrol-Cost-BUDI-MADANI-Calculator.git](https://github.com/MursyidAfifi/Smart-Petrol-Cost-BUDI-MADANI-Calculator.git)
