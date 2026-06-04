@@ -1,4 +1,3 @@
-<img width="1080" height="2400" alt="Screenshot_20260605_005203" src="https://github.com/user-attachments/assets/f70f77ad-28f9-4ea9-9cd8-bb4681d09d44" />
 # ⛽ Smart Petrol Cost & BUDI MADANI Calculator
 
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
@@ -45,7 +44,7 @@ Developed as part of the **ICT602 Mobile Technology** coursework, this project f
 
 | Calculation Receipt | Developer Profile |
 |:---:|:---:|
-| <img width="1080" height="2400" alt="Screenshot_20260605_004735" src="https://github.com/user-attachments/assets/30f5b1a2-e5eb-4e70-9ac6-6626638b0add" /> | ![Uploading Screenshot_20260605_005203.png…]()|
+| <img width="1080" height="2400" alt="Screenshot_20260605_004735" src="https://github.com/user-attachments/assets/30f5b1a2-e5eb-4e70-9ac6-6626638b0add" /> |<img width="1080" height="2400" alt="Screenshot_20260605_005203" src="https://github.com/user-attachments/assets/f4b93373-28c4-40db-8082-3446121c9047" />|
 
 ---
 
